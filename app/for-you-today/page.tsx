@@ -56,6 +56,15 @@ const progressData = {
   milestones: ["First salary", "Emergency fund started", "First investment"],
 };
 
+const badgesEarned = [
+  { id: "1", title: "Started a mutual fund SIP", icon: "📈", year: "2026" },
+  { id: "2", title: "Learnt your first lesson", icon: "📖", year: "2026" },
+  { id: "3", title: "Diwali gift sent", icon: "🪔", year: "2025" },
+  { id: "4", title: "First budget logged", icon: "📊", year: "2026" },
+  { id: "5", title: "Emergency fund started", icon: "🛡️", year: "2026" },
+  { id: "6", title: "First quiz completed", icon: "✅", year: "2026" },
+];
+
 export default function ForYouTodayPage() {
   const currentMonthLabel = useMemo(() => "March 2026", []);
 
@@ -242,6 +251,32 @@ export default function ForYouTodayPage() {
                     },
                   )}
                 </div>
+              </div>
+            </Card>
+
+            <Card className="bg-sarasage-deep/90 text-sm text-sarasage-cream/90">
+              <p className="text-xs uppercase tracking-[0.18em] text-sarasage-cream/70">
+                Badges earned
+              </p>
+              <div className="mt-3 grid grid-cols-3 gap-2">
+                {badgesEarned.map((badge) => (
+                  <div
+                    key={badge.id}
+                    className="flex flex-col items-center gap-1.5 rounded-xl border border-sarasage-cream/15 bg-sarasage-deep/80 py-2.5 px-1"
+                  >
+                    <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-sarasage-gold/25 text-base">
+                      {badge.icon}
+                    </div>
+                    <p className="text-center text-[10px] leading-tight text-sarasage-cream/90">
+                      {badge.title}
+                    </p>
+                    {badge.year && (
+                      <p className="text-[9px] text-sarasage-cream/60">
+                        {badge.year}
+                      </p>
+                    )}
+                  </div>
+                ))}
               </div>
             </Card>
 
