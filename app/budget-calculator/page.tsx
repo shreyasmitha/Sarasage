@@ -220,7 +220,9 @@ export default function BudgetCalculatorPage() {
                     ))}
                   </Pie>
                   <Tooltip
-                    formatter={(value: number) => formatCurrency(value)}
+                    formatter={(value) =>
+                      formatCurrency(Number(value ?? 0))
+                    }
                     contentStyle={{
                       backgroundColor: "#3C4A57",
                       borderRadius: 12,
