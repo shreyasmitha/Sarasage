@@ -12,29 +12,22 @@ export function Footer() {
           </p>
         </div>
         <div className="flex flex-wrap gap-4 text-xs">
-          <Link href="/about" className="hover:text-sarasage-gold">
-            About
+          <Link href="/" className="hover:text-sarasage-gold">Home</Link>
+          <Link href="/for-you-today" className="hover:text-sarasage-gold">
+            Today&apos;s Highlights
           </Link>
-          <Link href="/learn" className="hover:text-sarasage-gold">
-            Learn
+          <Link href="/learn" className="hover:text-sarasage-gold">Learn</Link>
+          <Link href="/budget-calculator" className="hover:text-sarasage-gold">
+            Budget Calculator
           </Link>
-          <Link href="/quizzes" className="hover:text-sarasage-gold">
-            Quizzes
+          <Link href="/freeze-the-trend" className="hover:text-sarasage-gold">
+            Freeze the Trend
           </Link>
           <Link href="/community" className="hover:text-sarasage-gold">
             Community
           </Link>
-          <Link
-            href="/budget-calculator"
-            className="hover:text-sarasage-gold"
-          >
-            Budget Calculator
-          </Link>
-          <Link
-            href="/freeze-the-trend"
-            className="hover:text-sarasage-gold"
-          >
-            Freeze the Trend
+          <Link href="/about" className="hover:text-sarasage-gold">
+            About us
           </Link>
         </div>
         <p className="text-[11px] text-sarasage-soft/70">

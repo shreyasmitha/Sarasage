@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Sarasage design tokens */
+/* Sarasage design tokens + palette */
 :root {
   --sarasage-deep: #3c4a57;
   --sarasage-sage: #808a63;
@@ -9,6 +9,13 @@
   --sarasage-beige: #f5f1e8;
   --sarasage-ink: #1f1f1f;
   --sarasage-gray: #e6e6e6;
+  /* Palette: Dusty Olive, Charcoal Blue, Soft Fawn, Dry Sage, Dark Khaki, Porcelain */
+  --palette-dusty-olive: #77815c;
+  --palette-charcoal-blue: #373f47;
+  --palette-soft-fawn: #dbbf8b;
+  --palette-dry-sage: #b2ac88;
+  --palette-dark-khaki: #363020;
+  --palette-porcelain: #f9f7f2;
 }
 
 @theme inline {
@@ -24,6 +31,12 @@
   --color-sarasage-beige: var(--sarasage-beige);
   --color-sarasage-ink: var(--sarasage-ink);
   --color-sarasage-gray: var(--sarasage-gray);
+  --color-palette-soft-fawn: var(--palette-soft-fawn);
+  --color-palette-porcelain: var(--palette-porcelain);
+  --color-palette-dusty-olive: var(--palette-dusty-olive);
+  --color-palette-dry-sage: var(--palette-dry-sage);
+  --color-palette-dark-khaki: var(--palette-dark-khaki);
+  --color-palette-charcoal-blue: var(--palette-charcoal-blue);
 
   --font-sans: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont,
     "Inter", sans-serif;

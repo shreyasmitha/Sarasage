@@ -17,47 +17,51 @@ export default function AboutPage() {
         </div>
 
         <section className="grid gap-8 text-sm text-sarasage-cream/85 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
-          <div className="space-y-4">
+          <div className="space-y-6">
             <div>
               <h2 className="font-serif text-lg text-sarasage-cream">
-                Mission
+                Who we are
               </h2>
               <p className="mt-2">
-                Our mission is to make money conversations feel calm, clear, and
-                grounded in real life. Sarasage translates financial concepts
-                into everyday language and tools that fit into a busy
-                early-career schedule.
+                Sarasage was born from within the Women@Dior 2025-2026 Program.
+                Developed under this prestigious international mentorship
+                initiative, our mission is to make money conversation feel calm,
+                clear, and grounded in real life. We believe that financial
+                independence is the cornerstone of autonomy, yet millions of
+                women around the world still encounter systemic barriers to
+                managing their own wealth. To solve this, we are building a
+                &quot;Financial Big Sister&quot;; a digital space where complex
+                economic data is transformed into calm, actionable wisdom.
               </p>
             </div>
 
             <div>
               <h2 className="font-serif text-lg text-sarasage-cream">
-                Why financial literacy matters
+                The meaning behind our name
               </h2>
               <p className="mt-2">
-                The first few years of work are full of invisible decisions:
-                understanding compensation, choosing savings rates, making sense
-                of inflation, and deciding when to spend or wait. Small choices
-                compound. Sarasage exists to make those choices visible, so you
-                can align money with the life you&apos;re building.
+                The name Sarasage represents the perfect balance between ancient
+                wisdom and modern financial awareness. It is a tribute to
+                Saraswati, the Hindu goddess of knowledge, music, art, speech,
+                wisdom, and learning. By combining her name with
+                &quot;Sage,&quot; we honor the tradition of female enlightenment
+                while positioning our users to become experts in their own
+                financial lives.
               </p>
             </div>
 
             <div>
               <h2 className="font-serif text-lg text-sarasage-cream">
-                Who Sarasage is for
+                Our symbol: the lotus
               </h2>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                <li>Young professionals in their first few years of work.</li>
-                <li>
-                  Early-career women navigating salary, saving, and investing
-                  questions.
-                </li>
-                <li>
-                  Anyone who wants gentle structure around budgeting and
-                  day-to-day money choices.
-                </li>
-              </ul>
+              <p className="mt-2">
+                Our icon is the Lotus, the sacred flower upon which Goddess
+                Saraswati rests. Just as the lotus blooms beautifully even in
+                murky waters, Sarasage empowers women to rise above financial
+                complexity and &quot;bloom&quot; into their full potential. It
+                is our symbol of resilience, growth, and the quiet confidence
+                that comes with mastering your own money.
+              </p>
             </div>
           </div>
 
@@ -118,4 +122,3 @@ export default function AboutPage() {
     </div>
   );
 }
-

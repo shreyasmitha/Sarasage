@@ -51,13 +51,13 @@ export default function Home() {
               Financial wisdom for the life you&apos;re building.
             </h1>
             <p className="max-w-xl text-sm leading-relaxed text-sarasage-cream/85 md:text-base">
-              Sarasage helps young professionals build financial clarity through
-              simple tools, real-life insights, and practical guidance. No
-              jargon. No shame. Just calm, confident money decisions.
+              Sarasage helps you find clarity through simple tools, real-world
+              insights, and practical guidance. No jargon. Just calm, transparent
+              and confident money decisions.
             </p>
           </div>
 
-          <div className="flex flex-col gap-3 pt-1 sm:flex-row">
+          <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:flex-wrap">
             <Link
               href="/learn"
               className="inline-flex items-center justify-center rounded-full bg-sarasage-gold px-5 py-2.5 text-sm font-medium text-sarasage-deep shadow-lg shadow-black/40 transition hover:-translate-y-0.5 hover:bg-sarasage-gold-soft"
@@ -69,6 +69,12 @@ export default function Home() {
               className="inline-flex items-center justify-center rounded-full border border-sarasage-gold/60 bg-sarasage-deep/40 px-5 py-2.5 text-sm font-medium text-sarasage-cream/90 backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-sarasage-gold hover:bg-sarasage-deep"
             >
               Try the Budget Calculator
+            </Link>
+            <Link
+              href="/freeze-the-trend"
+              className="inline-flex items-center justify-center rounded-full border border-sarasage-gold/60 bg-sarasage-deep/40 px-5 py-2.5 text-sm font-medium text-sarasage-cream/90 backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-sarasage-gold hover:bg-sarasage-deep"
+            >
+              Try the Freeze the Trend tool
             </Link>
           </div>
 
@@ -219,27 +225,27 @@ export default function Home() {
             <Link
               key={tool.title}
               href={tool.href}
-              className="group card-elevated flex flex-col justify-between border-white/8 bg-sarasage-deep/70 transition hover:-translate-y-1 hover:border-sarasage-gold/50 hover:bg-sarasage-deep/90"
+              className="group card-elevated flex flex-col justify-between border-palette-dusty-olive/50 bg-palette-dusty-olive/20 transition hover:-translate-y-1 hover:border-palette-dusty-olive/70 hover:bg-palette-dusty-olive/30"
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <p className="font-medium text-sarasage-cream">
                     {tool.title}
                   </p>
-                  <span className="rounded-full bg-sarasage-cream/8 px-3 py-1 text-[10px] text-sarasage-cream/85">
+                  <span className="rounded-full bg-sarasage-deep/30 px-3 py-1 text-[10px] text-sarasage-cream/90">
                     {tool.tag}
                   </span>
                 </div>
-                <p className="text-sm text-sarasage-cream/85">
+                <p className="text-sm text-sarasage-cream/90">
                   {tool.description}
                 </p>
               </div>
               <div className="mt-6 flex items-center justify-between text-xs text-sarasage-cream/80">
                 <span className="inline-flex items-center gap-1">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-sarasage-gold" />
                   Runs in your browser
                 </span>
-                <span className="inline-flex items-center gap-1 text-sarasage-gold group-hover:translate-x-0.5 transition">
+                <span className="inline-flex items-center gap-1 text-sarasage-gold group-hover:translate-x-0.5 transition font-medium">
                   Open tool
                   <span aria-hidden>↗</span>
                 </span>

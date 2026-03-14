@@ -192,6 +192,15 @@ export default function BudgetCalculatorPage() {
                 </div>
               </div>
             </Card>
+
+            <Card className="bg-sarasage-deep/80">
+              <h2 className="font-serif text-lg text-sarasage-cream">
+                Last month&apos;s trends
+              </h2>
+              <p className="mt-2 text-xs text-sarasage-cream/80">
+                Compare with your current snapshot to spot changes. Last month you had a higher spend on lifestyle (+₹2,000) and a slightly lower savings rate (16% vs current). Rent and essentials stayed stable.
+              </p>
+            </Card>
           </div>
 
           {/* Analysis */}
