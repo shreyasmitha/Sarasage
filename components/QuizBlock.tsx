@@ -12,6 +12,7 @@ export type Question = {
 };
 
 export function QuizBlock({ title, questions }: { title: string; questions: Question[] }) {
+  const [expanded, setExpanded] = useState(false);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
 
@@ -25,8 +26,31 @@ export function QuizBlock({ title, questions }: { title: string; questions: Ques
   }
 
   return (
-    <div className="card-elevated space-y-3 border-white/8 bg-sarasage-deep/80">
-      <h3 className="font-serif text-sm text-sarasage-cream">{title}</h3>
+    <div className="card-elevated overflow-hidden border-white/8 bg-sarasage-deep/80">
+      <div
+        className={`flex items-center justify-between gap-2 ${expanded ? "border-b border-white/10 pb-3" : ""}`}
+      >
+        <h3 className="font-serif text-sm text-sarasage-cream">{title}</h3>
+        {!expanded ? (
+          <button
+            type="button"
+            onClick={() => setExpanded(true)}
+            className="shrink-0 rounded-full bg-sarasage-gold/90 px-3 py-1 text-[11px] font-medium text-sarasage-deep hover:bg-sarasage-gold"
+          >
+            Try it out
+          </button>
+        ) : (
+          <button
+            type="button"
+            onClick={() => setExpanded(false)}
+            className="shrink-0 rounded-full border border-sarasage-cream/30 px-2 py-1 text-[10px] text-sarasage-cream/80 hover:bg-sarasage-cream/5"
+          >
+            Collapse
+          </button>
+        )}
+      </div>
+      {expanded && (
+        <div className="space-y-3 pt-3">
       <div className="space-y-2 text-xs text-sarasage-cream/90">
         {questions.map((q) => (
           <div key={q.id} className="rounded-xl border border-sarasage-cream/20 bg-sarasage-deep/80 p-2">
@@ -65,6 +89,8 @@ export function QuizBlock({ title, questions }: { title: string; questions: Ques
           <button type="button" onClick={() => setSubmitted(true)} className="rounded-full bg-sarasage-gold px-2 py-1 text-[10px] font-medium text-sarasage-deep">Check</button>
         </div>
       </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -46,12 +46,12 @@ export default function LearnPage() {
               <Link
                 key={module.slug}
                 href={`/learn/${module.slug}`}
-                className="card-elevated group flex flex-col gap-3 border-white/8 bg-sarasage-deep/70 transition hover:-translate-y-1 hover:border-sarasage-gold/40 hover:bg-sarasage-deep/80"
+                className="card-elevated group flex flex-col gap-2 border-white/8 bg-sarasage-deep/70 transition hover:-translate-y-1 hover:border-sarasage-gold/40 hover:bg-sarasage-deep/80"
               >
-                <div className="aspect-video w-full rounded-xl bg-gradient-to-br from-sarasage-sage/50 via-sarasage-deep/60 to-sarasage-gold/40 group-hover:from-sarasage-gold/55 group-hover:to-sarasage-sage/60" />
-                <div className="space-y-1">
+                <div className="aspect-[2/1] w-full max-h-[200px] rounded-xl bg-gradient-to-br from-sarasage-sage/50 via-sarasage-deep/60 to-sarasage-gold/40 group-hover:from-sarasage-gold/55 group-hover:to-sarasage-sage/60" />
+                <div className="space-y-0.5">
                   <p className="text-[10px] uppercase tracking-wider text-sarasage-cream/70">{module.type}</p>
-                  <h2 className="text-sm font-medium text-sarasage-cream">
+                  <h2 className="text-sm font-medium text-sarasage-cream line-clamp-2">
                     {module.title}
                   </h2>
                   <p className="text-[11px] text-sarasage-cream/70">{module.duration}</p>

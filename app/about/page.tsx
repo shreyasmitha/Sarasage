@@ -1,4 +1,36 @@
+import Image from "next/image";
+
 export default function AboutPage() {
+  const team = [
+    {
+      name: "Laura Clobochar",
+      role: "Project Manager / Business Analyst",
+      photo: "/team/laura.png",
+    },
+    {
+      name: "Shreya Smitha",
+      role:
+        "Software Developer, Community Manager, Marketing & Growth Lead",
+      photo: "/team/shreya.png",
+    },
+    {
+      name: "Minenhle Dlamini",
+      role: "Product and research",
+      photo: null,
+    },
+    {
+      name: "Noémie Ngako",
+      role:
+        "Data, Governance & Ethics Specialist / Philanthropy & Partnerships Lead",
+      photo: null,
+    },
+    {
+      name: "Jasmine Anand",
+      role: "Design and storytelling",
+      photo: "/team/jasmine.png",
+    },
+  ];
+
   return (
     <div className="section-wrapper py-12 md:py-16">
       <div className="space-y-10">
@@ -74,36 +106,25 @@ export default function AboutPage() {
               of financial literacy, technology, and community.
             </p>
             <div className="mt-3 space-y-3 text-xs text-sarasage-cream/90">
-              {[
-                {
-                  name: "Laura Clobochar",
-                  role: "Project Manager / Business Analyst",
-                },
-                {
-                  name: "Shreya Smitha",
-                  role:
-                    "Software Developer, Community Manager, Marketing & Growth Lead",
-                },
-                {
-                  name: "Minenhle Dlamini",
-                  role: "Product and research",
-                },
-                {
-                  name: "Noémie Ngako",
-                  role:
-                    "Data, Governance & Ethics Specialist / Philanthropy & Partnerships Lead",
-                },
-                {
-                  name: "Jasmine Anand",
-                  role: "Design and storytelling",
-                },
-              ].map((member) => (
+              {team.map((member) => (
                 <div
                   key={member.name}
                   className="flex items-center gap-3 rounded-2xl border border-white/10 bg-sarasage-deep/80 p-3"
                 >
-                  <div className="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-sarasage-sage/40 via-sarasage-gold/40 to-sarasage-deep/80">
-                    <div className="absolute inset-0 animate-pulse bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.35),transparent_55%)]" />
+                  <div className="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-full bg-sarasage-deep/80">
+                    {member.photo ? (
+                      <Image
+                        src={member.photo}
+                        alt={member.name}
+                        fill
+                        sizes="40px"
+                        className="object-cover"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 bg-gradient-to-br from-sarasage-sage/40 via-sarasage-gold/40 to-sarasage-deep/80">
+                        <div className="absolute inset-0 animate-pulse bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.35),transparent_55%)]" />
+                      </div>
+                    )}
                   </div>
                   <div>
                     <p className="text-[13px] font-medium text-sarasage-cream">
