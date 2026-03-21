@@ -53,15 +53,7 @@ export default function GovernancePage() {
         </div>
 
         <p className="text-xs text-sarasage-cream/60">
-          If the document does not appear, add your PDF to{" "}
-          <code className="rounded bg-white/10 px-1 py-0.5">
-            public/documents/governance-data-framework.pdf
-          </code>{" "}
-          in your repository and redeploy. See{" "}
-          <code className="rounded bg-white/10 px-1 py-0.5">
-            public/documents/README.md
-          </code>{" "}
-          for details.
+          Sarasage Data and Governance Framework
         </p>
       </div>
     </div>
