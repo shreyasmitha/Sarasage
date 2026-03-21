@@ -16,13 +16,13 @@ export default function AboutPage() {
     {
       name: "Minenhle Dlamini",
       role: "Product and research",
-      photo: null,
+      photo: "/team/minenhle.png",
     },
     {
       name: "Noémie Ngako",
       role:
         "Data, Governance & Ethics Specialist / Philanthropy & Partnerships Lead",
-      photo: null,
+      photo: "/team/noemie.png",
     },
     {
       name: "Jasmine Anand",

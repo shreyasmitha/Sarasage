@@ -1,13 +1,45 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { QuizBlock, type Question } from "@/components/QuizBlock";
 
 const learnModules = [
-  { slug: "article-1", title: "Your first budget: Understanding your real income", type: "Article", duration: "6 min" },
-  { slug: "article-2", title: "How much is that really worth? The work-hours behind every purchase", type: "Article", duration: "5 min" },
-  { slug: "video-mvp1", title: "Your first investment: Growing money for the future", type: "Video", duration: "8 min" },
-  { slug: "inflation-explained", title: "Inflation explained: Why money loses value over time", type: "Video", duration: "Coming soon" },
+  {
+    slug: "article-1",
+    title: "Your first budget: Understanding your real income",
+    type: "Article",
+    duration: "6 min",
+    image: "/learn/article-1.png",
+  },
+  {
+    slug: "article-2",
+    title: "How much is that really worth? The work-hours behind every purchase",
+    type: "Article",
+    duration: "5 min",
+    image: "/learn/article-2.png",
+  },
+  {
+    slug: "article-3",
+    title: "Your emergency fund: Building your financial safety net",
+    type: "Article",
+    duration: "7 min",
+    image: "/learn/article-3.png",
+  },
+  {
+    slug: "video-mvp1",
+    title: "Your first investment: Growing money for the future",
+    type: "Video",
+    duration: "8 min",
+    image: "/learn/video-1.png",
+  },
+  {
+    slug: "inflation-explained",
+    title: "Inflation explained: Why money loses value over time",
+    type: "Video",
+    duration: "Coming soon",
+    image: "/learn/video-2.png",
+  },
 ];
 
 const salaryQuiz: Question[] = [
@@ -46,9 +78,17 @@ export default function LearnPage() {
               <Link
                 key={module.slug}
                 href={`/learn/${module.slug}`}
-                className="card-elevated group flex flex-col gap-2 border-white/8 bg-sarasage-deep/70 transition hover:-translate-y-1 hover:border-sarasage-gold/40 hover:bg-sarasage-deep/80"
+                className="card-elevated group flex flex-col gap-2 overflow-hidden border-white/8 bg-sarasage-deep/70 transition hover:-translate-y-1 hover:border-sarasage-gold/40 hover:bg-sarasage-deep/80"
               >
-                <div className="aspect-[2/1] w-full max-h-[200px] rounded-xl bg-gradient-to-br from-sarasage-sage/50 via-sarasage-deep/60 to-sarasage-gold/40 group-hover:from-sarasage-gold/55 group-hover:to-sarasage-sage/60" />
+                <div className="relative aspect-[2/1] w-full max-h-[200px] overflow-hidden rounded-xl">
+                  <Image
+                    src={module.image}
+                    alt={module.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition duration-300 group-hover:scale-[1.02]"
+                  />
+                </div>
                 <div className="space-y-0.5">
                   <p className="text-[10px] uppercase tracking-wider text-sarasage-cream/70">{module.type}</p>
                   <h2 className="text-sm font-medium text-sarasage-cream line-clamp-2">

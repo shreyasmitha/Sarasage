@@ -29,6 +29,9 @@ export function Footer() {
           <Link href="/about" className="hover:text-sarasage-gold">
             About us
           </Link>
+          <Link href="/governance" className="hover:text-sarasage-gold">
+            Data &amp; governance
+          </Link>
         </div>
         <p className="text-[11px] text-sarasage-soft/70">
           Sarasage is an educational prototype and does not provide financial
