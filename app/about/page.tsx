@@ -4,30 +4,35 @@ export default function AboutPage() {
   const team = [
     {
       name: "Laura Clobochar",
-      role: "Project Manager / Business Analyst",
       photo: "/team/laura.png",
+      background: "Digital product development + financial industry.",
+      atSarasage: "Frontend developer + Business Analyst.",
     },
     {
       name: "Shreya Smitha",
-      role:
-        "Software Developer, Community Manager, Marketing & Growth Lead",
       photo: "/team/shreya.png",
-    },
-    {
-      name: "Minenhle Dlamini",
-      role: "Product and research",
-      photo: "/team/minenhle.png",
+      background: "Engineering + Supply Chain.",
+      atSarasage:
+        "Community Manager + Growth + Building the Prototype.",
     },
     {
       name: "Noémie Ngako",
-      role:
-        "Data, Governance & Ethics Specialist / Philanthropy & Partnerships Lead",
       photo: "/team/noemie.png",
+      background: "Governance + Client Engagement.",
+      atSarasage: "Impact + Governance + Strategic Partnerships.",
     },
     {
       name: "Jasmine Anand",
-      role: "Design and storytelling",
       photo: "/team/jasmine.png",
+      background: "Software developer + Machine Learning.",
+      atSarasage: "Technical Planning + Product Insights.",
+    },
+    {
+      name: "Minenhle Dlamini",
+      photo: "/team/minenhle.png",
+      background:
+        "Electrical + Electronics Engineering + Backend Development.",
+      atSarasage: "Content Developing.",
     },
   ];
 
@@ -105,33 +110,32 @@ export default function AboutPage() {
               A small, cross-disciplinary team experimenting at the intersection
               of financial literacy, technology, and community.
             </p>
-            <div className="mt-3 space-y-3 text-xs text-sarasage-cream/90">
+            <div className="mt-3 space-y-4 text-xs text-sarasage-cream/90">
               {team.map((member) => (
                 <div
                   key={member.name}
-                  className="flex items-center gap-3 rounded-2xl border border-white/10 bg-sarasage-deep/80 p-3"
+                  className="flex items-start gap-3 rounded-2xl border border-white/10 bg-sarasage-deep/80 p-3"
                 >
                   <div className="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-full bg-sarasage-deep/80">
-                    {member.photo ? (
-                      <Image
-                        src={member.photo}
-                        alt={member.name}
-                        fill
-                        sizes="40px"
-                        className="object-cover"
-                      />
-                    ) : (
-                      <div className="absolute inset-0 bg-gradient-to-br from-sarasage-sage/40 via-sarasage-gold/40 to-sarasage-deep/80">
-                        <div className="absolute inset-0 animate-pulse bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.35),transparent_55%)]" />
-                      </div>
-                    )}
+                    <Image
+                      src={member.photo}
+                      alt={member.name}
+                      fill
+                      sizes="40px"
+                      className="object-cover"
+                    />
                   </div>
-                  <div>
-                    <p className="text-[13px] font-medium text-sarasage-cream">
+                  <div className="min-w-0 flex-1 space-y-1.5">
+                    <p className="text-[13px] font-medium leading-tight text-sarasage-cream">
                       {member.name}
                     </p>
-                    <p className="text-[11px] text-sarasage-cream/75">
-                      {member.role}
+                    <p className="text-[11px] leading-snug text-sarasage-cream/85">
+                      <span className="text-sarasage-cream/70">Background:</span>{" "}
+                      {member.background}
+                    </p>
+                    <p className="text-[11px] leading-snug text-sarasage-cream/85">
+                      <span className="text-sarasage-cream/70">At Sarasage:</span>{" "}
+                      {member.atSarasage}
                     </p>
                   </div>
                 </div>

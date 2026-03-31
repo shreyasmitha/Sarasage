@@ -44,7 +44,7 @@ export function Navbar() {
               className={`relative pb-1 transition-colors ${
                 pathname === item.href
                   ? "text-sarasage-gold"
-                  : "text-sarasage-soft/90 hover:text-sarasage-gold"
+                  : "text-sarasage-cream hover:text-sarasage-gold"
               }`}
             >
               {item.label}

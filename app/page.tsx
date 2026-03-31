@@ -5,15 +5,18 @@ const featureCards = [
   {
     title: "Learn",
     description: "Short, calm lessons that explain real-world money decisions.",
+    href: "/learn",
   },
   {
     title: "Test",
     description: "Lightweight quizzes that reinforce concepts without pressure.",
+    href: "/learn",
   },
   {
     title: "Apply",
     description:
       "Practical tools like budgeting and Freeze the Trend to use right away.",
+    href: "/budget-calculator",
   },
 ];
 
@@ -188,8 +191,9 @@ export default function Home() {
 
         <div className="grid gap-5 md:grid-cols-3">
           {featureCards.map((card) => (
-            <div
+            <Link
               key={card.title}
+              href={card.href}
               className="card-elevated flex flex-col gap-3 border-white/8 bg-sarasage-deep/60 shadow-[0_14px_40px_rgba(0,0,0,0.5)] transition hover:-translate-y-1 hover:border-sarasage-gold/40 hover:bg-sarasage-deep/80"
             >
               <p className="text-xs uppercase tracking-[0.18em] text-sarasage-cream/70">
@@ -198,7 +202,7 @@ export default function Home() {
               <p className="text-sm text-sarasage-cream/90">
                 {card.description}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
