@@ -6,33 +6,33 @@ export default function AboutPage() {
       name: "Laura Clobochar",
       photo: "/team/laura.png",
       background: "Digital product development + financial industry.",
-      atSarasage: "Frontend developer + Business Analyst.",
+      atSarasage: "She serves as Project Manager and Business Analyst.",
     },
     {
       name: "Shreya Smitha",
       photo: "/team/shreya.png",
       background: "Engineering + Supply Chain.",
       atSarasage:
-        "Community Manager + Growth + Building the Prototype.",
+        "She serves as Community Manager and Marketing & Growth Lead, and is also in charge of developing the prototype.",
     },
     {
       name: "Noémie Ngako",
       photo: "/team/noemie.png",
       background: "Governance + Client Engagement.",
-      atSarasage: "Impact + Governance + Strategic Partnerships.",
+      atSarasage: "She serves as the Impact, Governance & Strategic Partnerships Lead.",
     },
     {
       name: "Jasmine Anand",
       photo: "/team/jasmine.png",
       background: "Software developer + Machine Learning.",
-      atSarasage: "Technical Planning + Product Insights.",
+      atSarasage: "She contributes to technical planning and product insights.",
     },
     {
       name: "Minenhle Dlamini",
       photo: "/team/minenhle.png",
       background:
         "Electrical + Electronics Engineering + Backend Development.",
-      atSarasage: "Content Developing.",
+      atSarasage: "She develops content to ensure that the platform educates effectively and improves its impact on users’ financial literacy and confidence.",
     },
   ];
 
